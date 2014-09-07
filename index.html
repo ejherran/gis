@@ -1,0 +1,125 @@
+<html lang="es">
+
+	<head>
+
+		<title>GIS Flandes</title>
+
+		<meta charset="utf-8" />
+        
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+		<link rel="shortcut icon" href="img/favicon.ico" />
+
+		<link rel="stylesheet" href="css/theme.css" />
+
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDZX1lUvMS4CaILdQB4oTco03xVPpBk3kU&sensor=FALSE">/*--- Google Maps ---*/</script>
+        <script type="text/javascript" src="jsc/ice/dom.js">/*--- ICE Code ---*/ </script>
+        <script type="text/javascript" src="jsc/ice/basico.js">/*--- ICE Code ---*/ </script>
+        <script type="text/javascript" src="jsc/ice/ajax.js">/*--- ICE Code ---*/ </script>
+        <script type="text/javascript" src="jsc/ice/upload.js">/*--- ICE Code ---*/ </script>
+        <script type="text/javascript" src="jsc/generic.js">/*--- Generic Code ---*/ </script>
+        <script type="text/javascript" src="jsc/asinc.js">/*--- Ajax Call Code ---*/ </script>
+        <script type="text/javascript" src="jsc/main.js">/*--- App Code ---*/ </script>
+
+	</head>
+
+	<body>
+
+        <div id="map"><!--MAP Here--></div>
+        
+        <div id="pov"></div>
+        
+        <div id="panel">
+            
+            <div id="phide"></div>
+            <div id="center" title="Centrar Mapa" ></div>  
+            <div id="list" title="Lista De Elementos" ></div>  
+            <div id="add" title="Agregar Elemento" ></div>  
+            
+            <div id="lister">
+            
+                <img id="lreturn" src="img/ret.png" /><b id="ltitle"><!-- Control --></b>
+                
+                <br /><br />
+                
+                <div id="lnav">
+                    <table id="lnTab"><!-- AJAX --></table>
+                </div>
+            </div>
+            
+            <div id="adder">
+            
+                <b>Tipo:</b>
+                <select id="telem">
+                    <option value="@">Seleccione...</option>
+                    <option value="C">Categoría</option>
+                    <option value="P">Punto</option>
+                </select>
+                
+                <hr />
+                
+                <div id="cform">
+                    <table>
+                        <tr><td><b>Tipo:</b></td><td><select id="ctype"><option value="@">Seleccione...</option><option value="S">Subcategoría</option><option value="G">Grupo De Puntos</option></select></td></tr>
+                        <tr><td><b>C. Padre:</b></td><td><select id="clist"></select></td></tr>
+                        <tr><td><b>Nombre:</b></td><td><input type="text" id="cname" /></td></tr>
+                        <tr><td><b>Descripción:</b></td><td><textarea id="cdesc" placeholder="Opcinal..." ></textarea></td></tr>
+                        <tr><td colspan="2"><input type="button" id="cbAdd" value="CREAR" /><input type="button" id="cbClean" value="LIMPIAR" /></td></tr>
+                    </table>
+                </div>
+                
+                <div id="pform">
+                    <table>
+                        <tr><td><b>Categoría:</b></td><td><select id="plist"></select></td></tr>
+                        <tr><td><b>Nombre:</b></td><td><input type="text" id="pname" /></td></tr>
+                        <tr><td><b>Dirección:</b></td><td><input type="text" id="pdir" /></td></tr>
+                        <tr><td><b>Coordenadas:</b></td><td><input type="text" id="pcor" placeholder="LAT,LON (4.24,-74.8)" /></td></tr>
+                        <tr><td><b>Descripción:</b></td><td><textarea id="pdesc" placeholder="Opcinal..." ></textarea></td></tr>
+                        <tr><td colspan="2"><input type="button" id="pbAdd" value="CREAR" /><input type="button" id="pbClean" value="LIMPIAR" /></td></tr>
+                    </table>
+                    
+                    <table class="filer">
+                        <tr>
+                            <td>
+                                <input id="fileIn" class="ihidden" type="file" />
+                                <input id="xFileIn" type="text" readonly="readonly" />
+                            </td>
+                            
+                            <th>
+                                <img id="xxFileIn" src="img/file.png" title="Seleccionar archivo..." />
+                            </th>
+                        </tr>
+                    </table>
+                    
+                    <table class="upFile">
+                        <tr><td><b id="upBar"></b></td></tr>
+                    </table>
+                    
+                    <table id="flist"><!-- Files --></table>
+                    
+                </div>
+            
+            </div>
+            
+        </div>
+        
+        <div id="info">
+            <div id="ihide"></div>
+            
+            <br />
+            
+            <div id="iimg">
+                <div id="ileft"></div>
+                <div id="iright"></div>
+            </div>
+            
+            <br />
+            
+            <textarea id="itext" readonly="readonly"></textarea>
+            
+        </div>
+        
+	</body>
+
+
+</html> 

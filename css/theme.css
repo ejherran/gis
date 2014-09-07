@@ -1,0 +1,371 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+#map
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+} 
+
+#pov
+{
+    position: absolute;
+    bottom: 45%;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: 1px solid #1E90FF;
+    border-left: 1px solid #1E90FF;
+    border-bottom: 1px solid #1E90FF;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    background-image: url(../img/pov.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0px 0px 10px #1E90FF;
+    z-index: 10;
+}
+
+#panel
+{
+    position: absolute;
+    overflow: auto;
+    top: 45%;
+    right: 0px;
+    width: 300px;
+    height: 50%;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: 1px solid #1E90FF;
+    border-left: 1px solid #1E90FF;
+    border-bottom: 1px solid #1E90FF;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px #1E90FF;
+    z-index: 15;
+    opacity: 0;
+    display: none;
+}
+
+#info
+{
+    position: absolute;
+    overflow: auto;
+    bottom: 5%;
+    left: 0px;
+    width: 200px;
+    height: 250px;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid #1E90FF;
+    border-right: 1px solid #1E90FF;
+    border-bottom: 1px solid #1E90FF;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px #1E90FF;
+    z-index: 15;
+    font-size: 0.8em;
+    text-align: center;
+    opacity: 0;
+    display: none;
+}
+
+#phide
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    background-image: url(../img/close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#ihide
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    background-image: url(../img/close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#ileft
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    background-image: url(../img/l.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#iright
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    background-image: url(../img/r.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#iimg
+{
+    position: absolute;
+    display: block;
+    top: 17px;
+    right: 5px;
+    width: 198px;
+    height: 150px;
+    border: 1px solid #1E90FF;
+    background-image: url(../img/blank.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+#itext
+{
+    position: absolute;
+    display: block;
+    bottom: 5px;
+    right: 5px;
+    width: 200px;
+    left: 5px;
+    height: 75px;
+    border: 1px solid #000000;
+    text-align: juntify;
+    font-size: 8pt;
+}
+
+#center
+{
+    right: 70px;
+    background-image: url(../img/center.png);
+}
+
+#list
+{
+    right: 40px;
+    background-image: url(../img/list.png);
+}
+
+#add
+{
+    right: 5px;
+    background-image: url(../img/add.png);
+}
+
+#center, #list, #add
+{
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #1E90FF;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    outline: none;
+}
+
+#center:hover, #list:hover, #add:hover
+{
+    background-color: #1E90FF;
+}
+
+#lister
+{
+    font-size: 0.8em;
+}
+
+#adder
+{
+    display: none;
+}
+
+#searcher
+{
+    background: green;
+    display: none;
+}
+
+#lister, #adder, #searcher
+{
+    position: absolute;
+    top: 40px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+#cform, #pform
+{
+    display: none;
+}
+
+#cform table, #pform table
+{
+    font-size: 0.9em;
+    text-align: right;
+    width: 100%;
+}
+
+#cform input[type="text"], #cform select, #cform textarea, #pform input[type="text"], #pform select, #pform textarea
+{
+    width: 100%;
+}
+
+#lnav
+{
+    width: 100%;
+}
+
+#lreturn
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 1em;
+    cursor: pointer;
+    display: none;
+}
+
+.ihidden
+{
+    display: none;
+}
+
+#pform .filer th
+{
+    width: 22px;
+    text-align: left;
+}
+
+#pform .filer img
+{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #1E90FF;
+}
+
+.upfile td
+{
+    height: 5px;
+    text-align: left;
+}
+
+#upBar
+{
+    background: #1E90FF;
+    height: 100%;
+    width: 0%;
+    display: block;
+}
+
+#flist td
+{
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+#flist th
+{
+    display: none;
+}
+
+#flist td:hover
+{
+    background: #1E90FF;
+}
+
+.lnCats, .lnPoints
+{
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.lnCats th, .lnPoints th
+{
+    display: none;
+}
+
+.lnCats td, .lnPoints td
+{
+    cursor: pointer;
+    padding: 5px;
+    border-top: 2px solid #BFBFBF;
+    border-bottom: 2px solid #BFBFBF;
+}
+
+.lnCats td:hover
+{
+    background: #95BBDF;
+}
+
+.lnPoints td:hover
+{
+    background: #DF9597;
+}
+
+textarea
+{
+    height: 10em;
+}
+
+select, input[type="button"]
+{
+    background: #FFFFFF;
+    border: 1px solid  #1E90FF;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+input[type="button"]
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="button"]:hover
+{
+    background: #1E90FF;
+    color: #FFFFFF;
+}
